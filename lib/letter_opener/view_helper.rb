@@ -11,9 +11,6 @@ module LetterOpener
     #remove {
       float: left;
     }
-    h1 {
-      text-align: center;
-    }
     #letter_opener_container {
       width: 100%;
       height: 100%;
@@ -29,7 +26,6 @@ module LetterOpener
   </style>
   <h1>
     <a href="#" id="remove">Close</a>
-    You've got email!
   </h1>
 
   #{content_tag(:iframe, nil, src: "about:blank", id: "letter_opener_iframe")}
