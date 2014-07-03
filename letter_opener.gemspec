@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "letter_opener"
-  s.version     = "1.2.2"
+  s.version     = "1.2.3"
   s.author      = "Ryan Bates"
   s.email       = "ryan@railscasts.com"
   s.homepage    = "http://github.com/ryanb/letter_opener"
