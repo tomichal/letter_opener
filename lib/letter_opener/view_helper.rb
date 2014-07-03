@@ -1,7 +1,7 @@
 module LetterOpener
   module ViewHelper
     def pop_email
-      location = settings[:location]
+      location = Rails.root.join("public", "letter_opener")
       filepath = Dir.glob("#{location}/*/*.html").max_by { |f| File.mtime(f) }
       if filepath
         filepath = filepath.gsub(Rails.root.to_s, "")
