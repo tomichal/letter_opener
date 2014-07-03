@@ -5,7 +5,7 @@ module LetterOpener
       filepath = Dir.glob("#{location}/*/*.html").max_by { |f| File.mtime(f) }
       if filepath
         filepath = filepath.gsub(Rails.root.join("public").to_s, "")
-        <<-CONTENT
+        html = <<-CONTENT
 <div id="letter_opener_container">
   <style>
     #letter_opener_container {
@@ -25,6 +25,7 @@ module LetterOpener
   #{content_tag(:iframe, nil, src: filepath)}
 </div>
           CONTENT
+        html.html_safe
       end
     end
   end
